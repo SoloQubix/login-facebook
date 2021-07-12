@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: #f0f2f5;
+    font-family: inherit;
+}
+
+.main {
+    padding-top: 126px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*-------------------------     MODO OSCURO     -------------------------*/
+
+.switch {
+    --bg-bgc: rgb(200, 130, 0);
+    background-color: var(--bg-bgc);
+    position: absolute;
+    top: 50px;
+    left: 1170px;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    line-height: 30px;
+    display: flex;
+    font-size: 16px;
+    box-shadow: 0px 0px 1px 1px rgb(158, 103, 0);
+
+}   .switch::after{
+        --bg-pseudo1: 0;
+        --bg-pseudo2: unset;
+        --bg-bgc: black;
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #f1f1f1;
+        top: 0;
+        right: var(--bg-pseudo1);
+        left: var(--bg-pseudo2);
+        border-radius: 100px;
+        box-shadow: 0px 0px 2px 2px black;
+        transition: 0.2s ease all;
+}
+.span {
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    display: block;
+}
+
+
+/*-------------------------     Logo y descripción de la página     -------------------------*/
+
+.section {
+    padding-right: 32px;
+    margin-right: 60px;
+    height: 300px;
+    width: 520px;
+}
+
+.section-titulo {
+    height: 110px;
+    width: 300px;
+    margin-top: 40px;
+    margin-left: -30px;
+}
+
+.section-descripcion {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    color: #1c1e21;
+}
+
+.hr-login {
+    border: 0.5px solid #e3e8ee;
+    margin: 0px 16px;
+}
+
+.hr-footer {
+    border: 0.5px solid #e3e8ee;
+    margin-top: 20px;
+}
+
+
+/*------------------------------    Login   ------------------------------*/
+
+.login {
+    height: 350px;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 1px 6px 10px #d0d4d6;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+}
+
+.login-input {
+    height: 50px;
+    width: 360px;
+    border: 1px solid #dfe1e4;
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 6px 18px;
+    margin-top: 13px;
+    outline: none;
+}
+
+.login-input:focus {
+    border: 1px solid #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+.login-descripcion {
+    height: 36px;
+    width: 396px;
+    margin-top: 28px;
+    text-align: center;
+}
+
+.login-iniciar {
+    height: 50px;
+    width: 360px;
+    background-color: #1877f2;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.login-iniciar:hover {
+    background-color: #0967e2;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.login-help {
+    color: #1877f2;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 22px 0px;
+    display: block;
+}
+
+.login-help:hover {
+    text-decoration: underline;
+}
+
+.login-crearPagina {
+    color: #1c1e21;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-crearPagina:hover {
+    text-decoration: underline;
+}
+
+.login-registrarse {
+    background-color: #42b72a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    height: 46px;
+    margin: 20px 0;
+    padding: 0px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-registrarse:hover {
+    background-color: #35a51f;
+    transition: background-color 0.2s;
+}
+
+
+/*-------------------------     Pie de pagina       ------------------------------*/
+
+.footer {
+    background-color: #fff;
+    height: 300px;
+    display: block;
+    text-align: center;
+    padding: 0 411px;
+}
+
+.cajaVacia-footer {
+    height: 20px;
+}
+
+.footer-ul {
+    list-style: none;
+    color: #3f3f3f;
+    font-size: 14px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.footer-lenguaje:hover {
+    text-decoration: underline;
+}
+
+.footer-lenguajePrincipal {
+    color: #3f3f3f;
+    line-height: 1.6;
+    font-size: 13px;
+    padding-left: 6px;
+}
+
+.footer-lenguaje {
+    color: #8a8d91;
+    text-decoration: none;
+    line-height: 1.6;
+    font-size: 13px;
+    padding-left: 13px;
+}
+
+.footer-btnMAS {
+    height: 20px;
+    width: 28px;
+    font-weight: 500;
+    border: 1px solid #dfe1e4;
+    border-radius: 1px;
+    box-shadow: 0 0 0 1px #dfe1e4;
+    font-size: 20px;
+    margin-left: 11px;
+    color: #737373;
+    cursor: pointer;
+}   .footer-btnMAS:hover{
+        background-color: #e2e2e2;
+}
+
+.copy-footer {
+    margin-left: -770px;
+    margin-top: 6px;
+    text-shadow: 1px 1px 2px rgb(46, 46, 46);
+}
