@@ -7,6 +7,11 @@
 .body {
     background-color: #f0f2f5;
     font-family: inherit;
+    transition: .3s;
+}       .bodyDarkMode{
+            background-color: #000000;
+            background-image: url(img/2.jpg);
+            /* background-repeat: no-repeat; */
 }
 
 .main {
@@ -20,8 +25,8 @@
 /*-------------------------     MODO OSCURO     -------------------------*/
 
 .switch {
-    --bg-bgc: rgb(200, 130, 0);
-    background-color: var(--bg-bgc);
+    /*--bg-bgc: rgb(200, 130, 0);*/
+    background-color: rgb(200, 130, 0);
     position: absolute;
     top: 50px;
     left: 1170px;
@@ -34,23 +39,53 @@
     font-size: 16px;
     box-shadow: 0px 0px 1px 1px rgb(158, 103, 0);
 
-}   .switch::after{
-        --bg-pseudo1: 0;
-        --bg-pseudo2: unset;
-        --bg-bgc: black;
-        content: "";
-        display: block;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        background: #f1f1f1;
-        top: 0;
-        right: var(--bg-pseudo1);
-        left: var(--bg-pseudo2);
-        border-radius: 100px;
-        box-shadow: 0px 0px 2px 2px black;
-        transition: 0.2s ease all;
+}       .switchDarkMode{
+            background-color: black;
+            box-shadow: 0 0 4px rgb(158, 103, 0), 0 0 8px rgb(158, 103, 0), 0 0 14px rgb(158, 103, 0);
+
+    }
+.boton-switch{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    right: 0;
+    left: unset;
+    border-radius: 100px;
+    box-shadow: 0px 0px 2px 2px black;
+       
+}       .boton-switchDarkMode{
+            right: unset;
+            left: 0;
+
 }
+.gif{
+    opacity: 0;
+    position: absolute;
+    top: 540px;
+    left: 1050px;
+    transition: 2s;
+}   .gifDarkMode{
+        opacity: 1;
+}   
+.darkface{
+    opacity: 0;
+    font-size: 75px;
+    height: 110px;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: -10px;
+    position: absolute;
+    color: #1877f2;
+    text-shadow: 0 0 6px #1877f2, 0 0 10px #1877f2, 0 0 16px #1877f2;
+    transition: 1s;
+
+}   .darkfaceDarkMode{
+    opacity: 1;
+}   
+
 .span {
     height: 30px;
     width: 30px;
@@ -73,6 +108,9 @@
     width: 300px;
     margin-top: 40px;
     margin-left: -30px;
+}   .section-tituloDarkMode{
+        opacity: 0;
+        transition: 1s;
 }
 
 .section-descripcion {
@@ -81,6 +119,9 @@
     font-weight: normal;
     line-height: 32px;
     color: #1c1e21;
+    transition: color .3s;
+}       .section-descripcionDarkMode{
+            color: #737373;
 }
 
 .hr-login {
@@ -100,10 +141,13 @@
     height: 350px;
     width: 400px;
     background-color: #fff;
-    box-shadow: 1px 6px 10px #d0d4d6;
+    box-shadow: 0 0 6px #d0d4d6, 0 0 10px #d0d4d6, 0 0 16px #d0d4d6;
     border-radius: 8px;
     border: none;
     text-align: center;
+}   .loginDarkMode{
+    background-color: #737373;
+    box-shadow: 0 0 6px #737373, 0 0 10px #737373, 0 0 16px #737373;
 }
 
 .login-input {
@@ -115,6 +159,12 @@
     padding: 6px 18px;
     margin-top: 13px;
     outline: none;
+}   .login-inputDarkMode{
+        background: none;
+        color: white;
+        
+}   .login-inputDarkMode::placeholder{
+        color: #dfe1e4;
 }
 
 .login-input:focus {
@@ -127,7 +177,19 @@
     width: 396px;
     margin-top: 28px;
     text-align: center;
-}
+}   .login-crearPagina {
+        color: #1c1e21;
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+    }           .login-crearPagina:hover {
+                    text-decoration: underline;
+                }   .login-crearPaginaDarkMode{
+                    color: #737373;
+                }   .login-descripcionDarkMode{
+                    color: #8a8d91;
+                }
 
 .login-iniciar {
     height: 50px;
@@ -159,17 +221,6 @@
     text-decoration: underline;
 }
 
-.login-crearPagina {
-    color: #1c1e21;
-    font-family: Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.login-crearPagina:hover {
-    text-decoration: underline;
-}
 
 .login-registrarse {
     background-color: #42b72a;
@@ -193,11 +244,15 @@
 /*-------------------------     Pie de pagina       ------------------------------*/
 
 .footer {
-    background-color: #fff;
-    height: 300px;
+    --bg-fondoFooter: #fff;
+    background-color: var(--bg-fondoFooter);
+    height: 279px;
     display: block;
     text-align: center;
     padding: 0 411px;
+    transition: .6s;
+}       .footer-DarkMode{
+            background-color: #0e0e0e;
 }
 
 .cajaVacia-footer {
@@ -219,11 +274,15 @@
     text-decoration: underline;
 }
 
-.footer-lenguajePrincipal {
+.footer-lenguajeEspañol {
     color: #3f3f3f;
     line-height: 1.6;
     font-size: 13px;
     padding-left: 6px;
+    transition: .6s;
+}       .footer-lenguajeEspañolDarkMode{
+            color: #cc9cdb;
+            text-shadow: 0 0 1px #a945c7, 0 0 4px #a945c7, 0 0 8px #a945c7;
 }
 
 .footer-lenguaje {
@@ -240,17 +299,35 @@
     font-weight: 500;
     border: 1px solid #dfe1e4;
     border-radius: 1px;
-    box-shadow: 0 0 0 1px #dfe1e4;
-    font-size: 20px;
+    box-shadow: 0px 2px #dfe1e4;
+    border: none;
+    font-size: 18px;
     margin-left: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #737373;
     cursor: pointer;
+    transition: .3s;
+    --bg-bgcBotonHover: #d8d8d8;   /*---Creando variable---*/
+
 }   .footer-btnMAS:hover{
-        background-color: #e2e2e2;
+        background-color: var(--bg-bgcBotonHover);  /*---Llamando a la variable---*/
+
+}       .footer-btnMASDarkMode{
+            background-color: #a945c7;
+            box-shadow: 0 0 4px #a945c7, 0 0 6px #a945c7, 0 0 10px #a945c7;
+            color: #cecece;
+            --bg-bgcBotonHover: #b661cf;  /*---Reemplazando el valor---*/
+
 }
 
-.copy-footer {
-    margin-left: -770px;
-    margin-top: 6px;
+.footer-nachitoCorp {
+    margin-left: -785px;
+    margin-top: 8px;
     text-shadow: 1px 1px 2px rgb(46, 46, 46);
+    transition: 1s;
+}       .footer-nachitoCorpDarkMode{
+            color: #cc9cdb;
+            text-shadow: 0 0 6px #a945c7, 0 0 10px #a945c7, 0 0 16px #a945c7;
 }

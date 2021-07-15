@@ -16,25 +16,28 @@
     <main class="main">
 
         <section class="section">
+            <span class="darkface" id="darkface">DarkFace</span>
+            <span class="gif" id="gif"><img src="img/3.gif" width="270px" height="150px"></span>
             <button class="switch" id="switch">
+                <span class="boton-switch" id="boton-switch"></span>
                 <span class="span"><i class="fas fa-sun"></i></span>
                 <span class="span"><i class="fas fa-moon"></i></span>
             </button>
-            <img class="section-titulo" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="">
-            <h2 class="section-descripcion">Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.</h2>
+            <img class="section-titulo" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" id="section-titulo">
+            <h2 class="section-descripcion" id="section-descripcion">Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.</h2>
         </section>
 
 
         <!------------------------------    Login   ------------------------------>
-        <form action="#" class="login">
-            <input type="text" class="login-input" placeholder="Correo electrónico o número de teléfono">
-            <input type="password" class="login-input" placeholder="Contraseña">
+        <form action="#" class="login" id="login">
+            <input type="text" class="login-input" id="login-input1" placeholder="Correo electrónico o número de teléfono">
+            <input type="password" class="login-input" id="login-input2" placeholder="Contraseña">
             <button class="login-iniciar">Iniciar sesión</button>
             <a href="#" class="login-help">¿Olvidaste tu contraseña?</a>
             <hr class="hr-login">
             <button class="login-registrarse">Crear cuenta nueva</button>
-            <div class="login-descripcion">
-                <a href="#" class="login-crearPagina">Crea una página</a> para un personaje público, un grupo de música o un negocio.
+            <div class="login-descripcion" id="login-descripcion">
+                <a href="#" class="login-crearPagina" id="login-crearPagina">Crea una página</a> para un personaje público, un grupo de música o un negocio.
             </div>
         </form>
 
@@ -43,49 +46,21 @@
 
 
     <!-------------------------     Pie de pagina       ------------------------------>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="cajaVacia-footer"></div>
         <ul class="footer-ul">
-            <li class="footer-lenguajePrincipal">Español</li>
-
-            <li>
-                <a href="#" class="footer-lenguaje">English (US)</a>
-            </li>
-
-            <li>
-                <a href="#" class="footer-lenguaje">Português (Brasil)</a>
-            </li>
-
-            <li>
-                <a href="#" class="footer-lenguaje">Français (France)</a>
-            </li>
-
-            <li>
-                <a href="#" class="footer-lenguaje">Italiano</a>
-            </li>
-
-            <li>
-                <a href="#" class="footer-lenguaje">Deutsch</a>
-            </li>
-
-            <li>
-                <a href="#" class="footer-lenguaje">العربية</a>
-            </li>
-
-            <li>
-                <a href="#" class="footer-lenguaje">中文(简体)</a>
-            </li>
-
-            <li>
-                <a href="#" class="footer-lenguaje">हिन्दी</a>
-            </li>
-
-            <li>
-                <a href="#" class="footer-lenguaje">日本語</a>
-            </li>
-            <button class="footer-btnMAS">+</button>
+            <li class="footer-lenguajeEspañol" id="footer-lenguajeEspañol">Español</li>
+            <li><a href="#" class="footer-lenguaje">English (US)</a></li>
+            <li><a href="#" class="footer-lenguaje">Português (Brasil)</a></li>
+            <li><a href="#" class="footer-lenguaje">Français (France)</a></li>
+            <li><a href="#" class="footer-lenguaje">Italiano</a></li>
+            <li><a href="#" class="footer-lenguaje">Deutsch</a></li>
+            <li><a href="#" class="footer-lenguaje">العربية</a></li>
+            <li><a href="#" class="footer-lenguaje">中文(简体)</a></li>
+            <li><a href="#" class="footer-lenguaje">हिन्दी</a></li>
+            <li><a href="#" class="footer-lenguaje">日本語</a></li>
+            <button class="footer-btnMAS" id="footer-btnMAS">+</button>
         </ul>
-
 
         <hr class="hr-footer">
 
@@ -129,7 +104,7 @@
             <li><a href="#" class="footer-lenguaje">Registro de actividad</a></li>
         </ul>
 
-        <div class="copy-footer">
+        <div class="footer-nachitoCorp" id="footer-nachitoCorp">
             <span class="footer-descripcion">Nachito Corporation &copy; 2021</span>
         </div>
 
